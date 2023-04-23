@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Queen City Plumbing",
+    "categories": [
+      "Plumbing",
+      "Shopping",
+      "Local Services",
+      "Home Services",
+      "Kitchen & Bath",
+      "Home & Garden",
+      "Water Heater Installation/Repair"
+    ]
+  },
+  {
+    "name": "Supercuts",
+    "categories": [
+      "Hair Salons",
+      "Hair Stylists",
+      "Barbers",
+      "Men's Hair Salons",
+      "Cosmetics & Beauty Supply",
+      "Shopping",
+      "Beauty & Spas"
+    ]
+  },
+  {
+    "name": "AW Collision",
+    "categories": [
+      "Car Rental",
+      "Windshield Installation & Repair",
+      "Auto Detailing",
+      "Hotels & Travel",
+      "Automotive",
+      "Towing",
+      "Body Shops"
+    ]
+  },
+  {
+    "name": "Manzetti's Tavern",
+    "categories": [
+      "Sandwiches",
+      "Italian",
+      "American (Traditional)",
+      "American (New)",
+      "Seafood",
+      "Steakhouses",
+      "Restaurants"
+    ]
+  },
+  {
+    "name": "GiGi's Boutique Fine Consignment",
+    "categories": [
+      "Children's Clothing",
+      "Accessories",
+      "Used",
+      "Vintage & Consignment",
+      "Fashion",
+      "Women's Clothing",
+      "Shopping"
+    ]
+  },
+  {
+    "name": "Stein Mart",
+    "categories": [
+      "Shopping",
+      "Fashion",
+      "Home & Garden",
+      "Department Stores",
+      "Women's Clothing",
+      "Home Decor",
+      "Men's Clothing"
+    ]
+  },
+  {
+    "name": "Dulce Alterations",
+    "categories": [
+      "Sewing & Alterations",
+      "Local Services",
+      "Fashion",
+      "Bridal",
+      "Clothing Rental",
+      "Formal Wear",
+      "Shopping"
+    ]
+  },
+  {
+    "name": "Aladdin's Eatery",
+    "categories": [
+      "Ethnic Food",
+      "Specialty Food",
+      "Food",
+      "Restaurants",
+      "Vegetarian",
+      "Mediterranean",
+      "Middle Eastern"
+    ]
+  },
+  {
+    "name": "Beautiful Glow Sugaring",
+    "categories": [
+      "Medical Spas",
+      "Day Spas",
+      "Sugaring",
+      "Health & Medical",
+      "Hair Removal",
+      "Skin Care",
+      "Beauty & Spas"
+    ]
+  },
+  {
+    "name": "Flyjin Café",
+    "categories": [
+      "Coffee & Tea",
+      "Cafes",
+      "Restaurants",
+      "Bakeries",
+      "Juice Bars & Smoothies",
+      "Local Flavor",
+      "Food"
+    ]
+  }
+]

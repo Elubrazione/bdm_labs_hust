@@ -1,0 +1,868 @@
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183c1"),
+  "business_id": "1SWheh84yJXfytovILXOAQ",
+  "name": "Arizona Biltmore Golf Club",
+  "address": "2818 E Camino Acequia Drive",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85016",
+  "latitude": 33.5221425,
+  "longitude": -112.0184807,
+  "stars": 3,
+  "review_count": 5,
+  "is_open": 0,
+  "attributes": {
+    "GoodForKids": "False"
+  },
+  "categories": [
+    "Golf",
+    "Active Life"
+  ],
+  "hours": null,
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.0184807,
+      33.5221425
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183c3"),
+  "business_id": "gnKjwL_1w79qoiV3IC_xQQ",
+  "name": "Musashi Japanese Restaurant",
+  "address": "10110 Johnston Rd, Ste 15",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28210",
+  "latitude": 35.092564,
+  "longitude": -80.859132,
+  "stars": 4,
+  "review_count": 170,
+  "is_open": 1,
+  "attributes": {
+    "GoodForKids": "True",
+    "NoiseLevel": "u'average'",
+    "RestaurantsDelivery": "False",
+    "GoodForMeal": "{'dessert': False, 'latenight': False, 'lunch': True, 'dinner': True, 'brunch': False, 'breakfast': False}",
+    "Alcohol": "u'beer_and_wine'",
+    "Caters": "False",
+    "WiFi": "u'no'",
+    "RestaurantsTakeOut": "True",
+    "BusinessAcceptsCreditCards": "True",
+    "Ambience": "{'romantic': False, 'intimate': False, 'touristy': False, 'hipster': False, 'divey': False, 'classy': False, 'trendy': False, 'upscale': False, 'casual': True}",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+    "RestaurantsTableService": "True",
+    "RestaurantsGoodForGroups": "True",
+    "OutdoorSeating": "False",
+    "HasTV": "True",
+    "BikeParking": "True",
+    "RestaurantsReservations": "True",
+    "RestaurantsPriceRange2": "2",
+    "RestaurantsAttire": "'casual'"
+  },
+  "categories": [
+    "Sushi Bars",
+    "Restaurants",
+    "Japanese"
+  ],
+  "hours": {
+    "Monday": "17:30-21:30",
+    "Wednesday": "17:30-21:30",
+    "Thursday": "17:30-21:30",
+    "Friday": "17:30-22:0",
+    "Saturday": "17:30-22:0",
+    "Sunday": "17:30-21:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.859132,
+      35.092564
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183c5"),
+  "business_id": "HhyxOkGAM07SRYtlQ4wMFQ",
+  "name": "Queen City Plumbing",
+  "address": "4209 Stuart Andrew Blvd, Ste F",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28217",
+  "latitude": 35.1900119,
+  "longitude": -80.8872232,
+  "stars": 4,
+  "review_count": 4,
+  "is_open": 1,
+  "attributes": {
+    "BusinessAcceptsBitcoin": "False",
+    "ByAppointmentOnly": "True",
+    "BusinessAcceptsCreditCards": "True"
+  },
+  "categories": [
+    "Plumbing",
+    "Shopping",
+    "Local Services",
+    "Home Services",
+    "Kitchen & Bath",
+    "Home & Garden",
+    "Water Heater Installation/Repair"
+  ],
+  "hours": {
+    "Monday": "7:0-23:0",
+    "Tuesday": "7:0-23:0",
+    "Wednesday": "7:0-23:0",
+    "Thursday": "7:0-23:0",
+    "Friday": "7:0-23:0",
+    "Saturday": "7:0-23:0",
+    "Sunday": "7:0-23:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.8872232,
+      35.1900119
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183cc"),
+  "business_id": "1Dfx3zM-rW4n-31KeC8sJg",
+  "name": "Taco Bell",
+  "address": "2450 E Indian School Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85016",
+  "latitude": 33.4951941,
+  "longitude": -112.0285876,
+  "stars": 3,
+  "review_count": 18,
+  "is_open": 1,
+  "attributes": {
+    "RestaurantsTakeOut": "True",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}",
+    "WiFi": "u'no'",
+    "RestaurantsDelivery": "False",
+    "OutdoorSeating": "False",
+    "RestaurantsAttire": "u'casual'",
+    "BusinessAcceptsCreditCards": "True",
+    "RestaurantsGoodForGroups": "True",
+    "RestaurantsReservations": "False",
+    "HasTV": "False",
+    "Ambience": "{'romantic': False, 'intimate': False, 'touristy': False, 'hipster': False, 'divey': False, 'classy': False, 'trendy': False, 'upscale': False, 'casual': False}",
+    "Alcohol": "u'none'",
+    "RestaurantsPriceRange2": "1",
+    "GoodForKids": "True"
+  },
+  "categories": [
+    "Restaurants",
+    "Breakfast & Brunch",
+    "Mexican",
+    "Tacos",
+    "Tex-Mex",
+    "Fast Food"
+  ],
+  "hours": {
+    "Monday": "7:0-0:0",
+    "Tuesday": "7:0-0:0",
+    "Wednesday": "7:0-0:0",
+    "Thursday": "7:0-1:0",
+    "Friday": "7:0-1:0",
+    "Saturday": "7:0-1:0",
+    "Sunday": "7:0-0:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.0285876,
+      33.4951941
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183e0"),
+  "business_id": "mNBp4KI2goFJKDB9VLGP9w",
+  "name": "JSE Automotive Services",
+  "address": "6875 N 21st Ave, Ste 118",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85015",
+  "latitude": 33.5380237,
+  "longitude": -112.1032008,
+  "stars": 5,
+  "review_count": 4,
+  "is_open": 1,
+  "attributes": null,
+  "categories": [
+    "Automotive",
+    "Auto Repair"
+  ],
+  "hours": null,
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.1032008,
+      33.5380237
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183e2"),
+  "business_id": "irft4YkdNsww4DNf_Aftew",
+  "name": "So Cool Frozen Yogurt",
+  "address": "9020 B Albemarle Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28227",
+  "latitude": 35.21051,
+  "longitude": -80.690262,
+  "stars": 4.5,
+  "review_count": 6,
+  "is_open": 0,
+  "attributes": {
+    "BusinessAcceptsCreditCards": "True",
+    "RestaurantsPriceRange2": "2",
+    "RestaurantsTakeOut": "True",
+    "BikeParking": "False",
+    "WiFi": "'free'",
+    "Caters": "False",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}"
+  },
+  "categories": [
+    "Juice Bars & Smoothies",
+    "Food",
+    "Ice Cream & Frozen Yogurt"
+  ],
+  "hours": {
+    "Monday": "11:30-20:30",
+    "Tuesday": "11:30-20:30",
+    "Thursday": "11:30-20:30",
+    "Friday": "11:30-21:0",
+    "Saturday": "11:30-21:0",
+    "Sunday": "11:30-21:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.690262,
+      35.21051
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183e4"),
+  "business_id": "BvYU3jvGd0TJ7IyZdfiN2Q",
+  "name": "Manzetti's Tavern",
+  "address": "6401 Morrison Blvd",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28211",
+  "latitude": 35.156338,
+  "longitude": -80.831878,
+  "stars": 3.5,
+  "review_count": 16,
+  "is_open": 0,
+  "attributes": {
+    "Alcohol": "u'full_bar'",
+    "BusinessAcceptsCreditCards": "True",
+    "RestaurantsAttire": "u'casual'",
+    "RestaurantsTakeOut": "True",
+    "RestaurantsReservations": "True",
+    "GoodForKids": "False",
+    "RestaurantsGoodForGroups": "True",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+    "OutdoorSeating": "False",
+    "RestaurantsDelivery": "False",
+    "RestaurantsPriceRange2": "2"
+  },
+  "categories": [
+    "Sandwiches",
+    "Italian",
+    "American (Traditional)",
+    "American (New)",
+    "Seafood",
+    "Steakhouses",
+    "Restaurants"
+  ],
+  "hours": {
+    "Monday": "11:0-22:0",
+    "Tuesday": "11:0-22:0",
+    "Wednesday": "11:0-23:0",
+    "Thursday": "11:0-23:0",
+    "Friday": "11:0-23:0",
+    "Saturday": "11:0-23:0",
+    "Sunday": "11:0-22:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.831878,
+      35.156338
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183f4"),
+  "business_id": "Qnz3ywR7BosTr8qDk6G-Pw",
+  "name": "Mattress Firm Final Markdown",
+  "address": "13129 S Tryon St, Ste 120",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28278",
+  "latitude": 35.1007253747,
+  "longitude": -80.9920791686,
+  "stars": 5,
+  "review_count": 4,
+  "is_open": 1,
+  "attributes": {
+    "RestaurantsPriceRange2": "2",
+    "BikeParking": "False",
+    "BusinessAcceptsCreditCards": "True",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}"
+  },
+  "categories": [
+    "Home & Garden",
+    "Mattresses",
+    "Home Decor",
+    "Furniture Stores",
+    "Shopping"
+  ],
+  "hours": {
+    "Monday": "10:0-20:0",
+    "Tuesday": "10:0-20:0",
+    "Wednesday": "10:0-20:0",
+    "Thursday": "10:0-20:0",
+    "Friday": "10:0-20:0",
+    "Saturday": "10:0-20:0",
+    "Sunday": "12:0-18:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.9920791686,
+      35.1007253747
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183f7"),
+  "business_id": "c-BELKj0SvNhBesQMf-bKw",
+  "name": "Circle K",
+  "address": "3101 W Northern Ave",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85051",
+  "latitude": 33.5528496,
+  "longitude": -112.1259755,
+  "stars": 2.5,
+  "review_count": 3,
+  "is_open": 1,
+  "attributes": {
+    "BusinessAcceptsCreditCards": "True"
+  },
+  "categories": [
+    "Convenience Stores",
+    "Automotive",
+    "Food",
+    "Gas Stations",
+    "Grocery"
+  ],
+  "hours": {
+    "Monday": "0:0-0:0",
+    "Tuesday": "0:0-0:0",
+    "Wednesday": "0:0-0:0",
+    "Thursday": "0:0-0:0",
+    "Friday": "0:0-0:0",
+    "Saturday": "0:0-0:0",
+    "Sunday": "0:0-0:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.1259755,
+      33.5528496
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183fb"),
+  "business_id": "_J_x_RaYTqAqAuCwgRhnRQ",
+  "name": "Kabob House",
+  "address": "6432 E Independence Blvd",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28212",
+  "latitude": 35.172028,
+  "longitude": -80.746801,
+  "stars": 3,
+  "review_count": 15,
+  "is_open": 0,
+  "attributes": {
+    "OutdoorSeating": "True",
+    "RestaurantsAttire": "u'casual'",
+    "WiFi": "u'free'",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': True, 'lot': True, 'valet': False}",
+    "Ambience": "{'romantic': False, 'intimate': False, 'classy': False, 'hipster': False, 'divey': False, 'touristy': False, 'trendy': False, 'upscale': False, 'casual': False}",
+    "RestaurantsTakeOut": "True",
+    "GoodForKids": "False",
+    "BikeParking": "False",
+    "Caters": "True",
+    "RestaurantsPriceRange2": "2",
+    "RestaurantsReservations": "True",
+    "RestaurantsDelivery": "False",
+    "Alcohol": "u'full_bar'",
+    "RestaurantsGoodForGroups": "True",
+    "HasTV": "True",
+    "BusinessAcceptsBitcoin": "True",
+    "BusinessAcceptsCreditCards": "True"
+  },
+  "categories": [
+    "Coffee & Tea",
+    "Hookah Bars",
+    "Nightlife",
+    "Persian/Iranian",
+    "Country Dance Halls",
+    "Middle Eastern",
+    "Beer",
+    "Wine & Spirits",
+    "Bars",
+    "Restaurants",
+    "Food",
+    "Lounges",
+    "Delis"
+  ],
+  "hours": {
+    "Tuesday": "17:30-0:0",
+    "Wednesday": "17:30-0:0",
+    "Thursday": "17:30-0:0",
+    "Friday": "12:30-2:0",
+    "Saturday": "12:30-2:0",
+    "Sunday": "12:30-21:30"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.746801,
+      35.172028
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183fc"),
+  "business_id": "0KlYc--jcw4EOYdPS8CDQg",
+  "name": "Cookie Cutters Haircuts for Kids",
+  "address": "14130 Rivergate Pkwy, Ste 200",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28273",
+  "latitude": 35.1024898,
+  "longitude": -80.9857691,
+  "stars": 4,
+  "review_count": 7,
+  "is_open": 1,
+  "attributes": {
+    "BikeParking": "False",
+    "BusinessAcceptsBitcoin": "False",
+    "GoodForKids": "True",
+    "RestaurantsPriceRange2": "2",
+    "HairSpecializesIn": "{'straightperms': False, 'coloring': False, 'extensions': False, 'africanamerican': False, 'curly': False, 'kids': True, 'perms': False, 'asian': False}",
+    "WheelchairAccessible": "True",
+    "BusinessParking": "{'garage': False, 'street': True, 'validated': False, 'lot': False, 'valet': False}",
+    "ByAppointmentOnly": "False",
+    "BusinessAcceptsCreditCards": "True"
+  },
+  "categories": [
+    "Beauty & Spas",
+    "Hair Salons",
+    "Kids Hair Salons"
+  ],
+  "hours": {
+    "Monday": "0:0-0:0",
+    "Tuesday": "10:0-19:0",
+    "Wednesday": "10:0-19:0",
+    "Thursday": "10:0-19:0",
+    "Friday": "10:0-19:0",
+    "Saturday": "9:0-17:0",
+    "Sunday": "11:0-16:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.9857691,
+      35.1024898
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218400"),
+  "business_id": "jtzU8hk78718cNWM_dMcDg",
+  "name": "Gap",
+  "address": "Northlake Mall, 6801 Northlake Mall Drive",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28216",
+  "latitude": 35.3521284,
+  "longitude": -80.8512352,
+  "stars": 3.5,
+  "review_count": 3,
+  "is_open": 0,
+  "attributes": {
+    "RestaurantsPriceRange2": "2",
+    "BusinessAcceptsCreditCards": "True",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}"
+  },
+  "categories": [
+    "Men's Clothing",
+    "Sporting Goods",
+    "Shopping",
+    "Fashion",
+    "Women's Clothing",
+    "Sports Wear"
+  ],
+  "hours": {
+    "Monday": "10:0-21:0",
+    "Tuesday": "10:0-21:0",
+    "Wednesday": "10:0-21:0",
+    "Thursday": "10:0-21:0",
+    "Friday": "10:0-21:0",
+    "Saturday": "10:0-21:0",
+    "Sunday": "12:0-18:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.8512352,
+      35.3521284
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218405"),
+  "business_id": "Y0dRlYjRNWckjvTGd55hzg",
+  "name": "M Catering by Michael's",
+  "address": "20645 N 28th St",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85050",
+  "latitude": 33.6745703,
+  "longitude": -112.0218342,
+  "stars": 5,
+  "review_count": 7,
+  "is_open": 1,
+  "attributes": {
+    "GoodForMeal": "{'dessert': False, 'latenight': False, 'lunch': False, 'dinner': False, 'brunch': False, 'breakfast': False}",
+    "RestaurantsGoodForGroups": "True",
+    "GoodForKids": "True",
+    "RestaurantsTakeOut": "True"
+  },
+  "categories": [
+    "Caterers",
+    "Event Planning & Services"
+  ],
+  "hours": null,
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.0218342,
+      33.6745703
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218409"),
+  "business_id": "HYunM2pknhIh8lbiMa7THw",
+  "name": "Dunn-Edwards Paints",
+  "address": "233 E Camelback Rd",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85012",
+  "latitude": 33.5090108,
+  "longitude": -112.0696671,
+  "stars": 3,
+  "review_count": 16,
+  "is_open": 1,
+  "attributes": {
+    "BusinessAcceptsCreditCards": "True",
+    "ByAppointmentOnly": "False",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+    "BikeParking": "False",
+    "RestaurantsPriceRange2": "2"
+  },
+  "categories": [
+    "Interior Design",
+    "Contractors",
+    "Hardware Stores",
+    "Building Supplies",
+    "Home & Garden",
+    "Paint Stores",
+    "Home Services",
+    "Shopping",
+    "Painters"
+  ],
+  "hours": {
+    "Monday": "6:0-17:0",
+    "Tuesday": "6:0-17:0",
+    "Wednesday": "6:0-17:0",
+    "Thursday": "6:0-17:0",
+    "Friday": "6:0-17:0",
+    "Saturday": "6:0-18:0",
+    "Sunday": "10:0-16:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.0696671,
+      33.5090108
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f21840b"),
+  "business_id": "gS-IoDQSggdxPn2Sf1yfGQ",
+  "name": "Desert Shores Dentistry",
+  "address": "16515 S 40th St",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85048",
+  "latitude": 33.2973184,
+  "longitude": -111.9964502,
+  "stars": 5,
+  "review_count": 5,
+  "is_open": 1,
+  "attributes": {
+    "ByAppointmentOnly": "True"
+  },
+  "categories": [
+    "General Dentistry",
+    "Health & Medical",
+    "Dentists"
+  ],
+  "hours": {
+    "Tuesday": "7:30-17:0",
+    "Wednesday": "7:30-17:0",
+    "Thursday": "7:30-17:0",
+    "Friday": "7:30-14:30"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -111.9964502,
+      33.2973184
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f21840f"),
+  "business_id": "44YFU284Z3KDEy25QyVoUw",
+  "name": "Nee House Chinese Restaurant",
+  "address": "13843 N Tatum Blvd, Ste 15",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85032",
+  "latitude": 33.6130201898,
+  "longitude": -111.9770356779,
+  "stars": 3.5,
+  "review_count": 269,
+  "is_open": 1,
+  "attributes": {
+    "Caters": "True",
+    "GoodForKids": "True",
+    "NoiseLevel": "u'average'",
+    "RestaurantsPriceRange2": "2",
+    "BusinessAcceptsCreditCards": "True",
+    "HasTV": "False",
+    "OutdoorSeating": "False",
+    "RestaurantsTakeOut": "True",
+    "RestaurantsTableService": "True",
+    "RestaurantsDelivery": "False",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+    "RestaurantsReservations": "True",
+    "BikeParking": "True",
+    "GoodForMeal": "{'dessert': False, 'latenight': False, 'lunch': True, 'dinner': True, 'brunch': False, 'breakfast': False}",
+    "Ambience": "{'romantic': False, 'intimate': False, 'touristy': False, 'hipster': False, 'divey': False, 'classy': False, 'trendy': False, 'upscale': False, 'casual': True}",
+    "WiFi": "u'no'",
+    "Alcohol": "'beer_and_wine'",
+    "RestaurantsGoodForGroups": "True",
+    "RestaurantsAttire": "'casual'"
+  },
+  "categories": [
+    "Chinese",
+    "Restaurants"
+  ],
+  "hours": {
+    "Monday": "11:0-21:0",
+    "Tuesday": "11:0-21:0",
+    "Wednesday": "11:0-21:0",
+    "Thursday": "11:0-21:0",
+    "Friday": "11:0-21:30",
+    "Saturday": "11:0-21:30",
+    "Sunday": "11:0-21:30"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -111.9770356779,
+      33.6130201898
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218420"),
+  "business_id": "BUdtUH9SkcitAf4JOOsa6A",
+  "name": "North Mountain Medical & Rehabilitation Center",
+  "address": "9155 N 3rd St",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85020",
+  "latitude": 33.5694844,
+  "longitude": -112.0688287,
+  "stars": 2,
+  "review_count": 11,
+  "is_open": 1,
+  "attributes": {
+    "ByAppointmentOnly": "False"
+  },
+  "categories": [
+    "Hospitals",
+    "Doctors",
+    "Rehabilitation Center",
+    "Medical Centers",
+    "Health & Medical"
+  ],
+  "hours": {
+    "Monday": "0:0-0:0",
+    "Tuesday": "0:0-0:0",
+    "Wednesday": "0:0-0:0",
+    "Thursday": "0:0-0:0",
+    "Friday": "0:0-0:0",
+    "Saturday": "0:0-0:0",
+    "Sunday": "0:0-0:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.0688287,
+      33.5694844
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218428"),
+  "business_id": "sV6kKpzneWwQ8cY8gQ8bgA",
+  "name": "Charlotte Mecklenburg Library - Beatties Ford Road Regional",
+  "address": "2412 Beatties Ford Rd",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28216",
+  "latitude": 35.267703,
+  "longitude": -80.8534335,
+  "stars": 4,
+  "review_count": 5,
+  "is_open": 1,
+  "attributes": {
+    "WiFi": "u'free'"
+  },
+  "categories": [
+    "Libraries",
+    "Educational Services",
+    "Education",
+    "Books",
+    "Mags",
+    "Music & Video",
+    "Shopping",
+    "Bookstores",
+    "Public Services & Government"
+  ],
+  "hours": {
+    "Monday": "9:0-20:0",
+    "Tuesday": "9:0-20:0",
+    "Wednesday": "9:0-20:0",
+    "Thursday": "9:0-20:0",
+    "Friday": "9:0-17:0",
+    "Saturday": "9:0-17:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.8534335,
+      35.267703
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f21842f"),
+  "business_id": "KjicU7uxRt2KDEnO5cgxDQ",
+  "name": "Arizona Florist",
+  "address": "2050 S 16th St, Ste 105",
+  "city": "Phoenix",
+  "state": "AZ",
+  "postal_code": "85034",
+  "latitude": 33.428259,
+  "longitude": -112.048848,
+  "stars": 3,
+  "review_count": 90,
+  "is_open": 1,
+  "attributes": {
+    "RestaurantsDelivery": "True",
+    "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+    "RestaurantsPriceRange2": "3",
+    "DogsAllowed": "False",
+    "BusinessAcceptsCreditCards": "True",
+    "WheelchairAccessible": "True",
+    "BikeParking": "False",
+    "BusinessAcceptsBitcoin": "False"
+  },
+  "categories": [
+    "Shopping",
+    "Floral Designers",
+    "Event Planning & Services",
+    "Florists",
+    "Flowers & Gifts"
+  ],
+  "hours": {
+    "Monday": "0:0-0:0",
+    "Tuesday": "6:0-20:0",
+    "Wednesday": "6:0-20:0",
+    "Thursday": "6:0-19:0",
+    "Friday": "6:0-19:0",
+    "Saturday": "6:0-19:0",
+    "Sunday": "6:0-7:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.048848,
+      33.428259
+    ]
+  }
+}
+{
+  "_id": ObjectId("6016c6b4af81085b0f218436"),
+  "business_id": "WyNlF7TMW7lNIta0jpWabw",
+  "name": "The Spoke Easy",
+  "address": "2923 S Tryon St, Ste 250",
+  "city": "Charlotte",
+  "state": "NC",
+  "postal_code": "28203",
+  "latitude": 35.201759,
+  "longitude": -80.871844,
+  "stars": 4.5,
+  "review_count": 6,
+  "is_open": 0,
+  "attributes": {
+    "BusinessAcceptsCreditCards": "True"
+  },
+  "categories": [
+    "Local Services",
+    "Bike Repair/Maintenance"
+  ],
+  "hours": null,
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -80.871844,
+      35.201759
+    ]
+  }
+}

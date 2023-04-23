@@ -1,0 +1,95 @@
+{
+  "queryPlanner": {
+    "plannerVersion": 1,
+    "namespace": "yelp.business",
+    "indexFilterSet": false,
+    "parsedQuery": {
+      "business_id": {
+        "$eq": "5JucpCfHZltJh5r1JabjDg"
+      }
+    },
+    "winningPlan": {
+      "stage": "FETCH",
+      "inputStage": {
+        "stage": "IXSCAN",
+        "keyPattern": {
+          "business_id": 1
+        },
+        "indexName": "business_id_1",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 1,
+        "direction": "forward",
+        "indexBounds": {
+          "business_id": [
+            "[\"5JucpCfHZltJh5r1JabjDg\", \"5JucpCfHZltJh5r1JabjDg\"]"
+          ]
+        }
+      }
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 1,
+    "executionTimeMillis": 2,
+    "totalKeysExamined": 1,
+    "totalDocsExamined": 1,
+    "executionStages": {
+      "stage": "FETCH",
+      "nReturned": 1,
+      "executionTimeMillisEstimate": 0,
+      "works": 2,
+      "advanced": 1,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "invalidates": 0,
+      "docsExamined": 1,
+      "alreadyHasObj": 0,
+      "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 1,
+        "executionTimeMillisEstimate": 0,
+        "works": 2,
+        "advanced": 1,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "invalidates": 0,
+        "keyPattern": {
+          "business_id": 1
+        },
+        "indexName": "business_id_1",
+        "isMultiKey": false,
+        "isUnique": true,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 1,
+        "direction": "forward",
+        "indexBounds": {
+          "business_id": [
+            "[\"5JucpCfHZltJh5r1JabjDg\", \"5JucpCfHZltJh5r1JabjDg\"]"
+          ]
+        },
+        "keysExamined": 1,
+        "dupsTested": 0,
+        "dupsDropped": 0,
+        "seenInvalidated": 0
+      }
+    }
+  },
+  "serverInfo": {
+    "host": "ashleytung",
+    "port": 27017,
+    "version": "3.2.22",
+    "gitVersion": "105acca0d443f9a47c1a5bd608fd7133840a58dd"
+  },
+  "ok": 1
+}

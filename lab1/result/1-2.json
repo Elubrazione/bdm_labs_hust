@@ -1,0 +1,205 @@
+[
+  {
+    "_id": ObjectId("6016c6b4af81085b0f2183c4"),
+    "business_id": "xvX2CttrVhyG2z1dFg_0xw",
+    "name": "Farmers Insurance - Paul Lorenz",
+    "address": "15655 W Roosevelt St, Ste 237",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4556129678,
+    "longitude": -112.3955963552,
+    "stars": 5,
+    "review_count": 3,
+    "is_open": 1,
+    "attributes": null,
+    "categories": [
+      "Insurance",
+      "Financial Services"
+    ],
+    "hours": {
+      "Monday": "8:0-17:0",
+      "Tuesday": "8:0-17:0",
+      "Wednesday": "8:0-17:0",
+      "Thursday": "8:0-17:0",
+      "Friday": "8:0-17:0"
+    },
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.3955963552,
+        33.4556129678
+      ]
+    }
+  },
+  {
+    "_id": ObjectId("6016c6b4af81085b0f218538"),
+    "business_id": "MBxoJEZ1laNbxCg4exLNug",
+    "name": "Monster Pool Company",
+    "address": "13277 W McDowell Rd, Ste 102",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85395",
+    "latitude": 33.4617724,
+    "longitude": -112.3442782,
+    "stars": 3.5,
+    "review_count": 14,
+    "is_open": 1,
+    "attributes": {
+      "RestaurantsPriceRange2": "2",
+      "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}",
+      "ByAppointmentOnly": "False",
+      "BusinessAcceptsCreditCards": "True",
+      "WheelchairAccessible": "True",
+      "BikeParking": "True"
+    },
+    "categories": [
+      "Home Services",
+      "Hot Tub & Pool",
+      "Shopping",
+      "Home & Garden",
+      "Pool Cleaners",
+      "Contractors"
+    ],
+    "hours": {
+      "Monday": "10:0-18:0",
+      "Tuesday": "10:0-18:0",
+      "Wednesday": "10:0-18:0",
+      "Thursday": "10:0-18:0",
+      "Friday": "10:0-18:0",
+      "Saturday": "10:0-18:0"
+    },
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.3442782,
+        33.4617724
+      ]
+    }
+  },
+  {
+    "_id": ObjectId("6016c6b4af81085b0f2185f5"),
+    "business_id": "221yaXPE1zmJqDvBVM__tw",
+    "name": "Baskin-Robbins",
+    "address": "15530 W Roosevelt St, Ste E105",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85338",
+    "latitude": 33.4575713,
+    "longitude": -112.3931507,
+    "stars": 2.5,
+    "review_count": 26,
+    "is_open": 1,
+    "attributes": {
+      "BikeParking": "True",
+      "RestaurantsGoodForGroups": "True",
+      "Caters": "False",
+      "GoodForKids": "True",
+      "RestaurantsReservations": "False",
+      "WiFi": "u'no'",
+      "BusinessAcceptsCreditCards": "True",
+      "RestaurantsTakeOut": "True",
+      "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': True, 'valet': False}",
+      "NoiseLevel": "u'quiet'",
+      "RestaurantsDelivery": "False",
+      "RestaurantsPriceRange2": "1",
+      "Alcohol": "u'none'",
+      "OutdoorSeating": "True",
+      "Ambience": "{'romantic': False, 'intimate': False, 'touristy': False, 'hipster': False, 'divey': False, 'classy': False, 'trendy': False, 'upscale': False, 'casual': False}"
+    },
+    "categories": [
+      "American (Traditional)",
+      "Ice Cream & Frozen Yogurt",
+      "Food",
+      "Restaurants"
+    ],
+    "hours": null,
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.3931507,
+        33.4575713
+      ]
+    }
+  },
+  {
+    "_id": ObjectId("6016c6b4af81085b0f21896b"),
+    "business_id": "A0dDYy7DWik6BzDX6LnOtg",
+    "name": "Harkins Theatres Estrella Falls 16",
+    "address": "15010 W McDowell Rd",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85395",
+    "latitude": 33.467496,
+    "longitude": -112.381426,
+    "stars": 4,
+    "review_count": 149,
+    "is_open": 1,
+    "attributes": {
+      "GoodForKids": "True"
+    },
+    "categories": [
+      "Arts & Entertainment",
+      "Cinema"
+    ],
+    "hours": {
+      "Monday": "9:30-23:0",
+      "Tuesday": "9:30-23:0",
+      "Wednesday": "9:30-23:0",
+      "Thursday": "9:30-23:0",
+      "Friday": "9:30-23:0",
+      "Saturday": "9:30-23:0",
+      "Sunday": "9:30-23:0"
+    },
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.381426,
+        33.467496
+      ]
+    }
+  },
+  {
+    "_id": ObjectId("6016c6b4af81085b0f218a63"),
+    "business_id": "ZfoU8nPmQf47EzOcxeif0Q",
+    "name": "Lane Bryant",
+    "address": "1400 Litchfield Rd",
+    "city": "Goodyear",
+    "state": "AZ",
+    "postal_code": "85395",
+    "latitude": 33.4638016876,
+    "longitude": -112.3586417025,
+    "stars": 4,
+    "review_count": 7,
+    "is_open": 1,
+    "attributes": {
+      "BusinessParking": "{'garage': False, 'street': False, 'validated': False, 'lot': False, 'valet': False}",
+      "BusinessAcceptsCreditCards": "True",
+      "BikeParking": "False",
+      "RestaurantsPriceRange2": "3"
+    },
+    "categories": [
+      "Shopping",
+      "Plus Size Fashion",
+      "Fashion",
+      "Accessories",
+      "Women's Clothing"
+    ],
+    "hours": {
+      "Monday": "10:0-21:0",
+      "Tuesday": "10:0-21:0",
+      "Wednesday": "10:0-21:0",
+      "Thursday": "10:0-21:0",
+      "Friday": "10:0-21:0",
+      "Saturday": "10:0-21:0",
+      "Sunday": "11:0-18:0"
+    },
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.3586417025,
+        33.4638016876
+      ]
+    }
+  }
+]

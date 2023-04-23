@@ -1,0 +1,56 @@
+{
+  "queryPlanner": {
+    "plannerVersion": 1,
+    "namespace": "yelp.business",
+    "indexFilterSet": false,
+    "parsedQuery": {
+      "business_id": {
+        "$eq": "5JucpCfHZltJh5r1JabjDg"
+      }
+    },
+    "winningPlan": {
+      "stage": "COLLSCAN",
+      "filter": {
+        "business_id": {
+          "$eq": "5JucpCfHZltJh5r1JabjDg"
+        }
+      },
+      "direction": "forward"
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 1,
+    "executionTimeMillis": 51,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 192609,
+    "executionStages": {
+      "stage": "COLLSCAN",
+      "filter": {
+        "business_id": {
+          "$eq": "5JucpCfHZltJh5r1JabjDg"
+        }
+      },
+      "nReturned": 1,
+      "executionTimeMillisEstimate": 50,
+      "works": 192611,
+      "advanced": 1,
+      "needTime": 192609,
+      "needYield": 0,
+      "saveState": 1504,
+      "restoreState": 1504,
+      "isEOF": 1,
+      "invalidates": 0,
+      "direction": "forward",
+      "docsExamined": 192609
+    }
+  },
+  "serverInfo": {
+    "host": "ashleytung",
+    "port": 27017,
+    "version": "3.2.22",
+    "gitVersion": "105acca0d443f9a47c1a5bd608fd7133840a58dd"
+  },
+  "ok": 1
+}

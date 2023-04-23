@@ -1,0 +1,26 @@
+[
+  {
+    "_id": ObjectId("600d7ea4f5e9bd91d7c3001a"),
+    "review_id": "2TzJjDVDEuAW6MR5Vuc1ug",
+    "user_id": "n6-Gk65cPZL6Uz8qRm3NYw",
+    "business_id": "WTqjgwHlXbSFevF32_DJVw",
+    "stars": 5,
+    "useful": 3,
+    "funny": 0,
+    "cool": 0,
+    "text": "I have to say that this office really has it together, they are so organized and friendly!  Dr. J. Phillipp is a great dentist, very friendly and professional.  The dental assistants that helped in my procedure were amazing, Jewel and Bailey helped me to feel comfortable!  I don't have dental insurance, but they have this insurance through their office you can purchase for $80 something a year and this gave me 25% off all of my dental work, plus they helped me get signed up for care credit which I knew nothing about before this visit!  I highly recommend this office for the nice synergy the whole office has!",
+    "date": "2016-11-09 20:09:03"
+  },
+  {
+    "_id": ObjectId("600d7ea4f5e9bd91d7c3001b"),
+    "review_id": "yi0R0Ugj_xUx_Nek0-_Qig",
+    "user_id": "dacAIZ6fTM6mqwW5uxkskg",
+    "business_id": "ikCg8xy5JIg_NGPx-MSIDA",
+    "stars": 5,
+    "useful": 0,
+    "funny": 0,
+    "cool": 0,
+    "text": "Went in for a lunch. Steak sandwich was delicious, and the Caesar salad had an absolutely delicious dressing, with a perfect amount of dressing, and distributed perfectly across each leaf. I know I'm going on about the salad ... But it was perfect.\n\nDrink prices were pretty good.\n\nThe Server, Dawn, was friendly and accommodating. Very happy with her.\n\nIn summation, a great pub experience. Would go again!",
+    "date": "2018-01-09 20:56:38"
+  }
+]

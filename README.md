@@ -1,1 +1,1 @@
-# dataManagement_labs_hust
+# Big Data Management of HUST
