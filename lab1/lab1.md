@@ -273,3 +273,31 @@ db.Subreview.find({$text: {$search: "delicious"}, useful: {$gt: 8}}).count()
 
 ![iamge1-11-4](image/1-11-4.png)
 
+
+### 1-12
+#### 题目
+在Subreview集合中统计评价中useful、funny和cool都大于5的商家，返回商家id及平均打星，并按商家id降序排列
+
+#### 解析
+1. $match 阶段：筛选出 useful、funny 和 cool 都大于 5 的评价。
+2. $group 阶段：按照 business_id 字段分组，计算每个商家的平均打星数。
+3. $sort 阶段：按照商家 id 降序排列。
+
+```js
+// 题目要求
+db.Subreview.aggregate([
+  {$match: {useful: {$gt: 5}, funny: {$gt: 5}, cool: {$gt: 5}}},
+  {$group: {_id: "$business_id", average_stars: {$avg: "$stars"}}},
+  {$sort: {_id: -1}}
+])
+```
+
+为了得到结果的数量，可以添加一个额外的`$group`聚合管道阶段，来计算匹配的文档总数。它将所有文档分组为一个组，`_id: null`意味着将所有文档放在同一个分组中。然后使用`$sum`操作符来计算文档数量，并将其存储在新的count字段中。可以看到结果为1894
+
+![image1-12](./image/1-12-2.png)
+
+
+### 1-13
+#### 题目
+
+#### 解析
