@@ -399,3 +399,42 @@ db.Subreview.aggregate([
 使用map reduce计算每个商家的评价的平均分（建议在Subreview集合上做，review过于大）,不要直接使用聚合函数。
 
 #### 解析
+通过map函数将每条评价按照商家id进行分组，输出商家id和该评价的星级以及计数器初始值为1。然后通过reduce函数将同一商家的评价星级累加，并将计数器进行累加，返回商家id和星级总和以及评价数总和。最后通过finalize函数计算出每个商家的平均评分，并输出到一个叫做Average_Stars的新集合中。
+
+```js
+db.Subreview.mapReduce(
+  function() {
+    emit(this.business_id, { stars: this.stars, count: 1 });
+  },
+
+  function(key, values) {
+    var totalStars = 0;
+    var totalCount = 0;
+    values.forEach(function(value) {
+      totalStars += value.stars;
+      totalCount += value.count;
+    });
+    return { stars: totalStars, count: totalCount };
+  },
+
+  {
+    out: "Average_Stars",
+    finalize: function(key, reducedValue) {
+      return { avgStars: reducedValue.stars / reducedValue.count };
+
+      // 如果按输出参考文档里的格式：
+      var avgStars = reducedValue.stars / reducedValue.count;
+      return { stars: reducedValue.stars, count: reducedValue.count, avg: avgStars };
+    }
+  }
+)
+```
+
+执行结果如下
+
+![image1-15-1](image/1-15-1.png)
+
+查看一下Average_Stars集合中的数据
+
+![image1-15-2](image/1-15-2.png)
+
