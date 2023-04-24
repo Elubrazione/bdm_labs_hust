@@ -299,5 +299,72 @@ db.Subreview.aggregate([
 
 ### 1-13
 #### 题目
+查询距离商家 `xvX2CttrVhyG2z1dFg_0xw(business_ id)` 120米以内的商家，只需要返回商家名字，地址和星级。*提示：使用2dsphere建立索引、获取商家地理坐标、使用坐标进行查询*
+
+#### 解析
+- 2dsphere索引是MongoDB支持的一种地理位置索引，用于存储和查询包含地理位置信息的数据。
+
+首先还是先看一下business_id为`xvX2CttrVhyG2z1dFg_0xw`的商家信息，并且可以得到地理位置信息在loc字段。
+
+```js
+db.business.find({business_id: "xvX2CttrVhyG2z1dFg_0xw"})
+> {
+    "_id": ObjectId("6016c6b4af81085b0f2183c4"),
+    "business_id": "xvX2CttrVhyG2z1dFg_0xw",
+    "postal_code": "85338",
+    "latitude": 33.4556129678,
+    "longitude": -112.3955963552,
+    "loc": {
+      "type": "Point",
+      "coordinates": [
+        -112.3955963552,
+        33.4556129678
+      ]
+    }
+  }
+```
+
+所以我们在loc字段上建立一个2dsphere索引，原来的两条一条是id（默认的），一条是business_id（前面建立的）
+
+```js
+db.business.createIndex({ loc: "2dsphere" })
+> {
+    "createdCollectionAutomatically" : false,
+    "numIndexesBefore" : 2,
+    "numIndexesAfter" : 3,
+    "ok" : 1
+ }
+```
+
+最后，使用`$near`操作符来查找附近的商家。该操作符接受一个`$geometry`参数来指定查询的中心点（即商家 xvX2CttrVhyG2z1dFg_0xw 的坐标），并接受一个`$maxDistance`参数来指定查询的最大距离
+
+```js
+db.business.find({
+  loc: {
+    $near: {
+      $geometry: {
+        type: "Point",
+        coordinates: [-112.3955963552, 33.4556129678]
+      },
+      $maxDistance: 120
+    }
+  }
+},
+{
+  _id: 0,
+  name: 1,
+  address: 1,
+  stars: 1
+})
+```
+
+结果有三条
+
+![image1-13-4](image/1-13-4.png)
+
+
+### 1-14
+#### 题目
+在集合Subreview上建立索引，统计出用户从2016年开始发出的评价有多少，按照评价次数降序排序，需要返回用户id和评价总次数，只显示前20条结果。
 
 #### 解析

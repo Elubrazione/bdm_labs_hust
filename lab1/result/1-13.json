@@ -1,0 +1,51 @@
+{
+  "_id": ObjectId("6016c6b4af81085b0f2183c4"),
+  "business_id": "xvX2CttrVhyG2z1dFg_0xw",
+  "name": "Farmers Insurance - Paul Lorenz",
+  "address": "15655 W Roosevelt St, Ste 237",
+  "city": "Goodyear",
+  "state": "AZ",
+  "postal_code": "85338",
+  "latitude": 33.4556129678,
+  "longitude": -112.3955963552,
+  "stars": 5,
+  "review_count": 3,
+  "is_open": 1,
+  "attributes": null,
+  "categories": [
+    "Insurance",
+    "Financial Services"
+  ],
+  "hours": {
+    "Monday": "8:0-17:0",
+    "Tuesday": "8:0-17:0",
+    "Wednesday": "8:0-17:0",
+    "Thursday": "8:0-17:0",
+    "Friday": "8:0-17:0"
+  },
+  "loc": {
+    "type": "Point",
+    "coordinates": [
+      -112.3955963552,
+      33.4556129678
+    ]
+  }
+}
+
+[
+  {
+    "name": "Farmers Insurance - Paul Lorenz",
+    "address": "15655 W Roosevelt St, Ste 237",
+    "stars": 5
+  },
+  {
+    "name": "Kurt Bojarski -  American Family Insurance",
+    "address": "15655 W Roosevelt St, Ste 101",
+    "stars": 5
+  },
+  {
+    "name": "Saddle Mountain Brewing Company",
+    "address": "15651 W Roosevelt St",
+    "stars": 4
+  },
+]
