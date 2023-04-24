@@ -368,3 +368,34 @@ db.business.find({
 在集合Subreview上建立索引，统计出用户从2016年开始发出的评价有多少，按照评价次数降序排序，需要返回用户id和评价总次数，只显示前20条结果。
 
 #### 解析
+由于要查询从2016年开始的评价，前面我们打印过Subview的数据条目的结构，包含有一个date字段，因此可以考虑在data上建立一个索引。同时由于要统计每个用户的评价次数，可以考虑再增加一个对于用户id的索引，因此我们要做的是建立一个用户id和评价时间的复合索引。
+
+```js
+db.Subreview.createIndex({user_id: 1, date: 1})
+> {
+    "createdCollectionAutomatically" : false,
+    "numIndexesBefore" : 3,
+    "numIndexesAfter" : 4,
+    "ok" : 1
+  }
+```
+
+(下面步骤要升级mongodb的版本，请最好先备份数据)
+先用`$substr`提取出年份，再用`$toInt`转成int类型，命名为year字段；然后使用`$match`以及`$gte`匹配所有年份大于2016年的数据。然后使用`$group`统计每个用户的评价次数，其中 _id 字段表示按照用户id进行分组，count字段使用`$sum`操作符计算评价次数的总和。接着使用 $sort 操作符对评价次数降序排序，最后使用`$limit`限制结果集大小为前20条。
+
+```js
+db.Subreview.aggregate([
+  { $project: { year: { $toInt: { $substr: ["$date", 0, 4] } } } },
+  { $match: { year: {$gte: 2016} } },
+  { $group: { _id: "$user_id", count: {$sum: 1} } },
+  { $sort: { count: -1 } },
+  { $limit: 20 },
+  { $project: { _id: 1, count: 1 } }
+])
+```
+
+### 1-15
+#### 题目
+使用map reduce计算每个商家的评价的平均分（建议在Subreview集合上做，review过于大）,不要直接使用聚合函数。
+
+#### 解析
