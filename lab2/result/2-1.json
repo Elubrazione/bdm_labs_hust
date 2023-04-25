@@ -1,0 +1,162 @@
+﻿[
+  {
+    "user": {
+      "identity": 6689227,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Rashmi",
+        "userid": "l6BmjZMeQD3rDxWUbiAiow",
+        "useful": "84",
+        "funny": "17",
+        "cool": "25",
+        "fans": "5"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689228,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Jenna",
+        "userid": "4XChL029mKr5hydo79Ljxg",
+        "useful": "48",
+        "funny": "22",
+        "cool": "16",
+        "fans": "4"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689229,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "David",
+        "userid": "bc8C_eETBWL0olvFSJJd0w",
+        "useful": "28",
+        "funny": "8",
+        "cool": "10",
+        "fans": "0"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689230,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Angela",
+        "userid": "dD0gZpBctWGdWo9WlGuhlA",
+        "useful": "30",
+        "funny": "4",
+        "cool": "14",
+        "fans": "5"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689231,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Nancy",
+        "userid": "MM4RJAeH6yuaN8oZDSt0RA",
+        "useful": "1114",
+        "funny": "279",
+        "cool": "665",
+        "fans": "39"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689232,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Marilyn",
+        "userid": "0rK89TS8xqy1wI4nYI1wfw",
+        "useful": "3475",
+        "funny": "2424",
+        "cool": "3048",
+        "fans": "186"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689233,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Keane",
+        "userid": "TEtzbpgA2BFBrC0y0sCbfw",
+        "useful": "13311",
+        "funny": "19356",
+        "cool": "15319",
+        "fans": "696"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689234,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Andre",
+        "userid": "KGuqerdeNhxzXZEyBaqqSw",
+        "useful": "1",
+        "funny": "0",
+        "cool": "1",
+        "fans": "0"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689235,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Tanya",
+        "userid": "T0gWkTHWRChVUe_Dn1F8nw",
+        "useful": "1630",
+        "funny": "693",
+        "cool": "1244",
+        "fans": "57"
+      }
+    }
+  },
+  {
+    "user": {
+      "identity": 6689236,
+      "labels": [
+        "UserNode"
+      ],
+      "properties": {
+        "name": "Trace",
+        "userid": "NQffx45eJaeqhFcMadKUQA",
+        "useful": "202",
+        "funny": "70",
+        "cool": "185",
+        "fans": "15"
+      }
+    }
+  }
+]

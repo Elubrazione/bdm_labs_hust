@@ -1,0 +1,16 @@
+{
+  "identity": 8337180,
+  "labels": [
+    "BusinessNode"
+  ],
+  "properties": {
+    "reviewcount": "575",
+    "address": "2300 Paseo Verde Pkwy",
+    "city": "Las Vegas",
+    "latitude": "36.020264",
+    "businessid": "YILyHegzhy1vlc_LNVfObw",
+    "name": "Bottiglia Enoteca",
+    "stars": "4.0",
+    "longitude": "-115.088561"
+  }
+}

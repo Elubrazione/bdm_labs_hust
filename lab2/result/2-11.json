@@ -1,0 +1,38 @@
+﻿[
+  {
+    "cityName": "Markham",
+    "numberOfBusiness": 8
+  },
+  {
+    "cityName": "Toronto",
+    "numberOfBusiness": 8
+  },
+  {
+    "cityName": "Richmond Hill",
+    "numberOfBusiness": 6
+  },
+  {
+    "cityName": "Las Vegas",
+    "numberOfBusiness": 3
+  },
+  {
+    "cityName": "Montréal",
+    "numberOfBusiness": 2
+  },
+  {
+    "cityName": "Pittsburgh",
+    "numberOfBusiness": 2
+  },
+  {
+    "cityName": "North York",
+    "numberOfBusiness": 1
+  },
+  {
+    "cityName": "Mesa",
+    "numberOfBusiness": 1
+  },
+  {
+    "cityName": "Cleveland",
+    "numberOfBusiness": 1
+  }
+]
