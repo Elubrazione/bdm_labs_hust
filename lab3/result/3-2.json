@@ -1,0 +1,126 @@
+[
+  {
+    "_id": "Starbucks",
+    "count": 1058
+  },
+  {
+    "_id": "McDonald's",
+    "count": 799
+  },
+  {
+    "_id": "Subway",
+    "count": 766
+  },
+  {
+    "_id": "Tim Hortons",
+    "count": 332
+  },
+  {
+    "_id": "Pizza Hut",
+    "count": 318
+  },
+  {
+    "_id": "Taco Bell",
+    "count": 312
+  },
+  {
+    "_id": "Burger King",
+    "count": 303
+  },
+  {
+    "_id": "Walgreens",
+    "count": 301
+  },
+  {
+    "_id": "Wendy's",
+    "count": 292
+  },
+  {
+    "_id": "The UPS Store",
+    "count": 279
+  },
+  {
+    "_id": "CVS Pharmacy",
+    "count": 248
+  },
+  {
+    "_id": "Great Clips",
+    "count": 239
+  },
+  {
+    "_id": "Circle K",
+    "count": 238
+  },
+  {
+    "_id": "Enterprise Rent-A-Car",
+    "count": 226
+  },
+  {
+    "_id": "Domino's Pizza",
+    "count": 209
+  },
+  {
+    "_id": "KFC",
+    "count": 195
+  },
+  {
+    "_id": "Dunkin' Donuts",
+    "count": 187
+  },
+  {
+    "_id": "Chase Bank",
+    "count": 183
+  },
+  {
+    "_id": "Chipotle Mexican Grill",
+    "count": 182
+  },
+  {
+    "_id": "Wells Fargo Bank",
+    "count": 181
+  },
+  {
+    "_id": "7-Eleven",
+    "count": 178
+  },
+  {
+    "_id": "Dairy Queen",
+    "count": 171
+  },
+  {
+    "_id": "Bank of America",
+    "count": 170
+  },
+  {
+    "_id": "Panera Bread",
+    "count": 156
+  },
+  {
+    "_id": "Jimmy John's",
+    "count": 154
+  },
+  {
+    "_id": "Panda Express",
+    "count": 153
+  },
+  {
+    "_id": "Papa John's Pizza",
+    "count": 152
+  },
+  {
+    "_id": "Popeyes Louisiana Kitchen",
+    "count": 148
+  },
+  {
+    "_id": "T-Mobile",
+    "count": 146
+  },
+  {
+    "_id": "Supercuts",
+    "count": 146
+  },
+  {
+    "_id": "Arby's",
+    "count": 138
+  }
+]
