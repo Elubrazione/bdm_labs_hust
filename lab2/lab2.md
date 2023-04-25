@@ -311,6 +311,10 @@ WHERE NOT (u1)-[:HasFriend]->(u2) AND NOT (u2)-[:HasFriend]->(u1) AND b IN u1_bu
 RETURN u1.name, u2.name, COUNT(b) AS sum
 ORDER BY sum DESC
 ```
+PROFILE查看执行计划后得到如下图
+![image2-17-2](image/2-17-2.png)
+运行时间如下
+![image2-17-3](image/2-17-3.png)
 
 #### 优化
 为UserNode的userid属性和BusinessNode的business_id属性创建索引，以加速节点的查找和匹配操作。
@@ -318,6 +322,7 @@ ORDER BY sum DESC
 CREATE INDEX FOR (user:UserNode) ON (user.userid)
 CREATE INDEX FOR (b:BusinessNode) ON (b.businessid)
 ```
+![image2-17-4](image/2-17-4.png)
 
 将子查询中的COLLECT操作改为使用节点标签进行聚合，以减少内存使用。
 ```sql
@@ -332,7 +337,10 @@ WHERE NOT (u1)-[:HasFriend]->(u2)
 RETURN u1.name, u2.name, COUNT(b.businessid) AS sum
 ORDER BY sum DESC
 ```
-
+重新PROFILE查看执行计划
+![image2-17-5](image/2-17-5.png)
+运行时间如下，可以看到比建立索引前短了特别多
+![image2-17-6](image/2-17-6.png)
 
 ### 2-18
 #### 题目
