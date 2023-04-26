@@ -144,7 +144,14 @@ mongoexport -d yelp -c BusiDistinct --type=csv --fields city,category --out resu
 
 ![image3-3-6](image/3-3-6.png)
 
-5. 
+5. 上一步导出后，result.csv文件位于~路径下，用cp命令把他放到neo4j安装目录的的import路径下
+
+```shell
+cd ~/neo4j-community-4.0.9/import
+cp /root/result.csv ./
+```
+
+6. 
 在neo4j网页数据库中输入以下命令，要对空值做处理
 ```sql
 LOAD CSV WITH HEADERS FROM "file:///result.csv" AS f
