@@ -1,4 +1,4 @@
-## 任务3：多数据库交互应用实验
+## 任务三：多数据库交互应用实验
 
 ### 3-1
 #### 题目
@@ -106,12 +106,12 @@ db.CityBusiness.mapReduce(
 
 #### 解析
 1. Neo4j数据库查询操作
-    ```sql
-    MATCH (b:BusinessNode)-[:IN_CATEGORY]->(c:CategoryNode)
-    RETURN b.name AS business_name, b.city AS city, c.category AS category
-    ```
-    可以看到结果条数
-    ![image3-3-1](image/3-1-1.png)
+```sql
+MATCH (b:BusinessNode)-[:IN_CATEGORY]->(c:CategoryNode)
+RETURN b.name AS business_name, b.city AS city, c.category AS category
+```
+可以看到结果条数
+![image3-3-1](image/3-1-1.png)
 
 2. 导入服务器和MongoDB操作不再赘述，请看本文档的3-2章节。这里新的集合名叫做BusinessAll
 ![image3-3-2](image/3-3-2.png)
@@ -119,34 +119,32 @@ db.CityBusiness.mapReduce(
 ![iamge3-3-4](image/3-3-4.png)
 
 3. 去重操作
+使用`$group`将BusinessAll集合中所有的文档按照city和category字段进行分组，然后用`$forEach`将前面结果中的数据插入到BusiDistinct集合中；BusiDistinct集合中的所有文档，即为不重复的城市和类别组合。
 
-    使用`$group`将BusinessAll集合中所有的文档按照city和category字段进行分组，然后用`$forEach`将前面结果中的数据插入到BusiDistinct集合中；BusiDistinct集合中的所有文档，即为不重复的城市和类别组合。
-
-    ```js
-    db.createCollection("BusiDistinct")
-    db.BusinessAll.aggregate([
-      { $group: { _id: { city: '$city', category: '$category' } } }
-    ]).forEach((item) => { db.BusiDistinct.insert( item._id ) } )
-    ```
-    查看结果
-    ![image3-3-5](image/3-3-5.png)
+```js
+db.createCollection("BusiDistinct")
+db.BusinessAll.aggregate([
+  { $group: { _id: { city: '$city', category: '$category' } } }
+]).forEach((item) => { db.BusiDistinct.insert( item._id ) } )
+```
+查看结果
+![image3-3-5](image/3-3-5.png)
 
 4. 导出BusiDistinct集合的内容为csv文件
-
-    ```shell
-    mongoexport -d yelp -c BusiDistinct --type=csv --fields city,category --out result.csv
-    ```
-    ![image3-3-6](image/3-3-6.png)
+```shell
+mongoexport -d yelp -c BusiDistinct --type=csv --fields city,category --out result.csv
+```
+![image3-3-6](image/3-3-6.png)
 
 5. 
-    在neo4j网页数据库中输入以下命令，要对空值做处理
-    ```sql
-    LOAD CSV WITH HEADERS FROM "file:///result.csv" AS f
-    MERGE (c:CityNode {city: COALESCE(f.city, "")})
-    MERGE (a:CategoryNode {category: COALESCE(f.category, "")})
-    CREATE (c) -[:Has]-> (a)
-    ```
-    结果如下
-    ![image3-3-7](image/3-3-7.png)
-    查看一下图谱
-    ![image3-3-8](image/3-3-8.png)
+在neo4j网页数据库中输入以下命令，要对空值做处理
+```sql
+LOAD CSV WITH HEADERS FROM "file:///result.csv" AS f
+MERGE (c:CityNode {city: COALESCE(f.city, "")})
+MERGE (a:CategoryNode {category: COALESCE(f.category, "")})
+CREATE (c) -[:Has]-> (a)
+```
+结果如下
+![image3-3-7](image/3-3-7.png)
+查看一下图谱
+![image3-3-8](image/3-3-8.png)

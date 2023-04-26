@@ -159,12 +159,12 @@ RETURN friendsList,number0fFoFs
 查询城市是Chandler的商家节点。
 
 #### 解析
-- 使用 MATCH 子句匹配类别为 Hot Pot 的 CategoryNode 节点和它们所对应的 BusinessNode 节点，并将匹配到的 BusinessNode 节点的 city 属性作为变量 cityName 传递到下一个子句。
-- 使用 WITH 子句对每个城市进行分组，统计该城市中类别为 Hot Pot 的商家数量，并将城市名称和商家数量传递到下一个子句。
-- 使用 ORDER BY 子句将商家数量按照降序排序，以便选择前 5 个数量最多的城市。
-- 使用 RETURN 子句输出城市名称和对应的商家数量，并限制结果数量为前 5 条。
+- 使用MATCH子句匹配类别为Hot Pot的CategoryNode节点和它们所对应的 BusinessNode节点，并将匹配到的BusinessNode节点的city属性作为变量 cityName 传递到下一个子句。
+- 使用WITH子句对每个城市进行分组，统计该城市中类别为Hot Pot的商家数量，并将城市名称和商家数量传递到下一个子句。
+- 使用ORDER BY子句将商家数量按照降序排序，以便选择前5个数量最多的城市。
+- 使用RETURN子句输出城市名称和对应的商家数量，并限制结果数量为前5条。
 
-注意，这个查询语句中的 b.city 是用于选择 BusinessNode 节点的 city 属性，而不是输出结果中的城市名称。因此，我们需要使用 WITH 子句将 city 属性转换为一个变量，并将这个变量作为输出结果中的城市名称。
+注意，这个查询语句中的b.city是用于选择BusinessNode节点的city属性，而不是输出结果中的城市名称。因此，我们需要使用 WITH 子句将 city 属性转换为一个变量，并将这个变量作为输出结果中的城市名称。
 
 ```sql
 MATCH (b:BusinessNode)-[:IN_CATEGORY]->(:CategoryNode {category: 'Hot Pot'})
@@ -252,7 +252,7 @@ LIMIT 10
 #### 题目
 体会建立索引对查询带来的性能提升，但会导致插入，删除等操作变慢（需要额外维护索引代价）。
 #### 解析
-1. 首先为UserNode增加flag属性，由于Neo4j服务器的Java Heap空间不足，只为fans值大于3000的数据添加flag属性，值等于其fans值
+1.首先为UserNode增加flag属性，由于Neo4j服务器的Java Heap空间不足，只为fans值大于3000的数据添加flag属性，值等于其fans值
 
 ```sql
 MATCH (user:UserNode)
@@ -260,7 +260,7 @@ WHERE toInteger(user.fans) > 300
 SET user.flag = user.fans
 ```
 
-2. 对UserNode的flag属性执⾏查询（flag>300）
+2.对UserNode的flag属性执⾏查询（flag>300）
 
 ```sql
 MATCH (user:UserNode)
@@ -268,14 +268,14 @@ WHERE toInteger(user.flag) > 300
 RETURN user
 ```
 
-3. 把所有的flag值改为8001（更新操作）
+3.把所有的flag值改为8001（更新操作）
 ```sql
 MATCH (user:UserNode)
 WHERE toInteger(user.flag) > 300
 SET user.flag = 8001
 ```
 
-4. 删除（flag>8000），删除后查询一下看看，结果为空，删除成功
+4.删除（flag>8000），删除后查询一下看看，结果为空，删除成功
 
 ```sql
 MATCH (user:UserNode)
@@ -283,7 +283,7 @@ WHERE user.flag > 8000
 REMOVE user.flag
 ```
 
-5. 重新执行操作1，然后在flg属性上建立索引
+5.重新执行操作1，然后在flg属性上建立索引
 ```sql
 CREATE INDEX FOR (user:UserNode) ON (user.flag)
 
@@ -292,7 +292,7 @@ CALL db.indexes()
 DROP INDEX `name with no quote`
 ```
 
-6. 重复上述查询、修改、删除操作
+6.重复上述查询、修改、删除操作
 
 
 ### 2-17
@@ -344,7 +344,7 @@ ORDER BY sum DESC
 
 ### 2-18
 #### 题目
-18.分别使用Neo4j和MongoDB查询review_id为Q1sbwvVQXV2734tPgoKj4Q对应的user信息，比较两者查询时间，指出Neo4j和MongoDB主要的适用场景。
+分别使用Neo4j和MongoDB查询review_id为Q1sbwvVQXV2734tPgoKj4Q对应的user信息，比较两者查询时间，指出Neo4j和MongoDB主要的适用场景。
 
 #### 解析
 ##### Neo4j

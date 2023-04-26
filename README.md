@@ -1,1 +1,9 @@
-# Big Data Management of HUST
+# HUST-2023春 大数据管理实验
+
+## 任务一：MongoDB实验
+
+## 任务二：Neo4j实验
+
+## 任务三：多数据库交互应用实验
+
+## 任务四：不同类型数据库MVCC多版本并发控制对比实验
