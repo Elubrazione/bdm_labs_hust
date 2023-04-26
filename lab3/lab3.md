@@ -44,6 +44,7 @@ use yelp
 db.createCollection("CityBusiness")
 show collections
 ```
+
 ![image3-2-1](image/3-2-1.png)
 
 3. 退出mongoDB，回到~，把数据导入到mongoDB中的yelp数据集的CityBusiness集合中。
@@ -90,6 +91,7 @@ db.CityBusiness.mapReduce(
 
 ##### 比较分析
 结果是aggregate方法特别快、无等待感，但是mapreduce要特别久，下图是mapreduce输出结果
+
 ![image3-2-8](image/3-2-8.png)
 
 分析如下
@@ -111,11 +113,15 @@ MATCH (b:BusinessNode)-[:IN_CATEGORY]->(c:CategoryNode)
 RETURN b.name AS business_name, b.city AS city, c.category AS category
 ```
 可以看到结果条数
+
 ![image3-3-1](image/3-1-1.png)
 
 2. 导入服务器和MongoDB操作不再赘述，请看本文档的3-2章节。这里新的集合名叫做BusinessAll
+
 ![image3-3-2](image/3-3-2.png)
+
 ![iamge3-3-3](image/3-3-3.png)
+
 ![iamge3-3-4](image/3-3-4.png)
 
 3. 去重操作
@@ -128,12 +134,14 @@ db.BusinessAll.aggregate([
 ]).forEach((item) => { db.BusiDistinct.insert( item._id ) } )
 ```
 查看结果
+
 ![image3-3-5](image/3-3-5.png)
 
 4. 导出BusiDistinct集合的内容为csv文件
 ```shell
 mongoexport -d yelp -c BusiDistinct --type=csv --fields city,category --out result.csv
 ```
+
 ![image3-3-6](image/3-3-6.png)
 
 5. 
@@ -145,6 +153,9 @@ MERGE (a:CategoryNode {category: COALESCE(f.category, "")})
 CREATE (c) -[:Has]-> (a)
 ```
 结果如下
+
 ![image3-3-7](image/3-3-7.png)
+
 查看一下图谱
+
 ![image3-3-8](image/3-3-8.png)

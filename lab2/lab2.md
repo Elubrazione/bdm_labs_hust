@@ -135,6 +135,7 @@ RETURN COLLECT(c.category)
 ```
 
 是以list的形式返回
+
 ![image2-9](image/2-9.png)
 
 
@@ -189,6 +190,7 @@ RETURN name, count
 ORDER BY count DESC
 LIMIT 10
 ```
+
 ![image2-12](image/2-12.png)
 
 ### 2-13
@@ -209,6 +211,7 @@ WITH business.name AS name, count, count*1.0/cnt AS popularity, business.reviewc
 RETURN popularity, name, reviewcount
 ORDER BY reviewcount DESC
 ```
+
 ![image2-13](image/2-13-1.png)
 
 
@@ -226,6 +229,7 @@ MATCH (:UserNode)-[:Review]->(r:ReviewNode)
 WHERE r.stars = '5.0'
 RETURN DISTINCT b.city as city
 ```
+
 ![image2-14](image/2-14.png)
 
 
@@ -245,6 +249,7 @@ RETURN user.userid, user.name, count
 ORDER BY count DESC
 LIMIT 10
 ```
+
 ![image2-15](image/2-15.png)
 
 
@@ -312,8 +317,11 @@ RETURN u1.name, u2.name, COUNT(b) AS sum
 ORDER BY sum DESC
 ```
 PROFILE查看执行计划后得到如下图
+
 ![image2-17-2](image/2-17-2.png)
+
 运行时间如下
+
 ![image2-17-3](image/2-17-3.png)
 
 #### 优化
@@ -322,6 +330,7 @@ PROFILE查看执行计划后得到如下图
 CREATE INDEX FOR (user:UserNode) ON (user.userid)
 CREATE INDEX FOR (b:BusinessNode) ON (b.businessid)
 ```
+
 ![image2-17-4](image/2-17-4.png)
 
 将子查询中的COLLECT操作改为使用节点标签进行聚合，以减少内存使用。
@@ -338,8 +347,11 @@ RETURN u1.name, u2.name, COUNT(b.businessid) AS sum
 ORDER BY sum DESC
 ```
 重新PROFILE查看执行计划
+
 ![image2-17-5](image/2-17-5.png)
+
 运行时间如下，可以看到比建立索引前短了特别多
+
 ![image2-17-6](image/2-17-6.png)
 
 ### 2-18
