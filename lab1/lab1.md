@@ -84,6 +84,17 @@ db.business.count()
 db.business.explain("executionStats").count()
 ```
 
+![image1-6](./image/1-6.png)
+
+包含了优化选择的查询计划和查询的执行统计集合
+- "winningPlan": {"stage": "COUNT"} 表示优化器选择了一个简单的计数操作作为最优查询计划，即对集合进行 COUNT 操作来统计文档数。
+- "rejectedPlans": [] 表示优化器没有拒绝任何其他查询计划。
+- "nReturned": 0 表示返回的文档数为 0。
+- "executionTimeMillis": 0 表示执行该查询所用的时间为 0 毫秒。
+- "totalKeysExamined": 0 表示索引键被查询的次数为 0。
+- "totalDocsExamined": 0 表示被查询的文档数为 0。
+- "executionStages": {"stage": "COUNT", ...} 描述了查询的执行阶段，包括：COUNT 阶段、估计执行时间、文档计数、跳过的文档数等。
+
 
 ### 1-7
 #### 题目
@@ -122,7 +133,12 @@ db.business.find({categories: {$size: 7}}, {_id: 0, name: 1, categories: 1}).lim
 db.business.find({business_id: "5JucpCfHZltJh5r1JabjDg"}).explain("executionStats")
 ```
 
-MongoDB优化器发现没有`business_id`的索引可以使用，因此选择了`COLLSCAN`，即遍历整个集合。在执行阶段，我们可以看到查询语句扫描了192609个文档。查询返回了1个文档，执行时间为51ms
+MongoDB优化器发现没有`business_id`的索引可以使用，因此选择了`COLLSCAN`，即遍历整个集合。在执行阶段，我们可以看到查询语句扫描了192609个文档。查询返回了1个文档，执行时间为51ms。
+- "nReturned": 1 表示返回的文档数为 1。
+- "executionTimeMillis": 51 表示执行该查询所用的时间为 51 毫秒。
+- "totalKeysExamined": 0 表示索引键被查询的次数为 0。
+- "totalDocsExamined": 192609 表示被查询的文档数为 192609。
+- "executionStages": {"stage": "COLLSCAN", ...} 描述了查询的执行阶段，包括：全集合扫描阶段、过滤条件、文档计数、跳过的文档数等。
 
 ```json
 // 没有建立索引时的explain结果
@@ -173,7 +189,7 @@ db.business.createIndex({business_id: 1})
   }
 ```
 
-通过索引`business_id_1`进行扫描并返回结果，因为该索引是唯一的，并且查询只需要扫描一次。在执行过程中，总共检查了一个键和一个文档，并且执行时间为 2 ms。
+通过索引`business_id_1`进行扫描并返回结果，因为该索引是唯一的，并且查询只需要扫描一次。在执行过程中，总共检查了一个键和一个文档，并且执行时间为 2 ms，比原来的51ms快很多。
 
 ```json
 // 建立索引后再次explain后的结果
@@ -214,7 +230,7 @@ db.business.aggregate([{$group:{_id:"$stars", count:{$sum:1}}}, {$sort:{_id:-1}}
 创建一个review的子集合Subreview(取review的前五十万条数据)，分别对评论的内容建立全文索引，对useful建立升序索引，然后查询评价的内容中包含关键词delicious且useful大于8的评价。插入数据过程耗时约150s，建索引耗时约60s。
 
 #### 解析
-首先使用 `$limit` 管道操作符将 review 集合中的文档限制为前 500,000 条，然后使用 `$out` 管道操作符将结果输出到一个名为 Subreview 的新集合中，这样就创建一个新的子集合 Subreview。
+首先使用 `$limit` 管道操作符将 review 集合中的文档限制为前 500,000 条，然后使用 `$out` 管道操作符将结果输出到一个名为Subreview的新集合中，这样就创建一个新的子集合 Subreview。
 
 ```js
 db.review.aggregate([{$limit: 500000}, {$out: "Subreview"}])
@@ -228,7 +244,6 @@ db.review.aggregate([{$limit: 500000}, {$out: "Subreview"}])
 我们先查看一下Subreview中的数据，评论字段叫做text
 
 ```js
-// 获取评论字段
 db.Subreview.find().limit(1)
 > {
     "_id": ObjectId("600d7ea4f5e9bd91d7c30018"),
@@ -279,9 +294,9 @@ db.Subreview.find({$text: {$search: "delicious"}, useful: {$gt: 8}}).count()
 在Subreview集合中统计评价中useful、funny和cool都大于5的商家，返回商家id及平均打星，并按商家id降序排列
 
 #### 解析
-1. $match 阶段：筛选出 useful、funny 和 cool 都大于 5 的评价。
-2. $group 阶段：按照 business_id 字段分组，计算每个商家的平均打星数。
-3. $sort 阶段：按照商家 id 降序排列。
+1. `$match` 阶段：筛选出 useful、funny 和 cool 都大于 5 的评价。
+2. `$group` 阶段：按照 business_id 字段分组，计算每个商家的平均打星数。
+3. `$sort` 阶段：按照商家 id 降序排列。
 
 ```js
 // 题目要求
@@ -349,8 +364,7 @@ db.business.find({
       $maxDistance: 120
     }
   }
-},
-{
+}, {
   _id: 0,
   name: 1,
   address: 1,
@@ -381,7 +395,8 @@ db.Subreview.createIndex({user_id: 1, date: 1})
 ```
 
 (下面步骤要升级mongodb的版本，请最好先备份数据)
-先用`$substr`提取出年份，再用`$toInt`转成int类型，命名为year字段；然后使用`$match`以及`$gte`匹配所有年份大于2016年的数据。然后使用`$group`统计每个用户的评价次数，其中 _id 字段表示按照用户id进行分组，count字段使用`$sum`操作符计算评价次数的总和。接着使用 $sort 操作符对评价次数降序排序，最后使用`$limit`限制结果集大小为前20条。
+
+先用`$substr`提取出年份，再用`$toInt`转成int类型，命名为year字段；然后使用`$match`以及`$gte`匹配所有年份大于2016年的数据。然后使用`$group`统计每个用户的评价次数，其中 _id 字段表示按照用户id进行分组，count字段使用`$sum`操作符计算评价次数的总和。接着使用`$sort`操作符对评价次数降序排序，最后使用`$limit`限制结果集大小为前20条。
 
 ```js
 db.Subreview.aggregate([
@@ -396,7 +411,7 @@ db.Subreview.aggregate([
 
 ### 1-15
 #### 题目
-使用map reduce计算每个商家的评价的平均分（建议在Subreview集合上做，review过于大）,不要直接使用聚合函数。
+使用mapreduce计算每个商家的评价的平均分（建议在Subreview集合上做，review过于大）,不要直接使用聚合函数。
 
 #### 解析
 通过map函数将每条评价按照商家id进行分组，输出商家id和该评价的星级以及计数器初始值为1。然后通过reduce函数将同一商家的评价星级累加，并将计数器进行累加，返回商家id和星级总和以及评价数总和。最后通过finalize函数计算出每个商家的平均评分，并输出到一个叫做Average_Stars的新集合中。
