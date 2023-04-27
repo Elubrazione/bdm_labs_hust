@@ -116,7 +116,7 @@ RETURN b.name AS business_name, b.city AS city, c.category AS category
 ```
 可以看到结果条数
 
-![image3-3-1](image/3-1-1.png)
+![image3-3-1](image/3-3-1.png)
 
 2.导入服务器和MongoDB操作不再赘述，请看本文档的3-2章节。这里新的集合名叫做BusinessAll
 
