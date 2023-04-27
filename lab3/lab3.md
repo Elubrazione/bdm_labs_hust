@@ -21,7 +21,8 @@ RETURN c.city AS city, b.name AS name, b.address AS address
 
 #### 解析
 ##### Neo4j结果导入MongoDB
-1. 将刚刚neo4j中的输出结果用csv格式下载到本地。打开终端，cd到刚刚csv保存的目录下，输入以下命令将数据导入到服务器上。
+1.将刚刚neo4j中的输出结果用csv格式下载到本地。打开终端，cd到刚刚csv保存的目录下，输入以下命令将数据导入到服务器上。
+
 - 这里的3-1.csv是刚刚保存的输出结果的文件名
 - root@124.71.146.178是服务器用户名和IP地址
 - :/root/ 代表上传目标路径
@@ -38,7 +39,7 @@ scp ./3-1.csv root@124.71.146.178:/root/
 
 ![image3-2-3](image/3-2-3.png)
 
-2. 切换到mongoDB的yelp数据集并创建一个新的集合，这里叫做CityBusiness
+2.切换到mongoDB的yelp数据集并创建一个新的集合，这里叫做CityBusiness
 ```js
 use yelp
 db.createCollection("CityBusiness")
@@ -47,7 +48,8 @@ show collections
 
 ![image3-2-1](image/3-2-1.png)
 
-3. 退出mongoDB，回到~，把数据导入到mongoDB中的yelp数据集的CityBusiness集合中。
+3.退出mongoDB，回到~，把数据导入到mongoDB中的yelp数据集的CityBusiness集合中。
+
 ```shell
 mongoimport -d=yelp -c=CityBusiness --type=csv --headerline ./3-1.csv
 ```
@@ -107,7 +109,7 @@ db.CityBusiness.mapReduce(
 (2) 将去重后的结果导入Neo4j中的新库result中，完成（City-[Has]->Category）图谱的构建。
 
 #### 解析
-1. Neo4j数据库查询操作
+1.Neo4j数据库查询操作
 ```sql
 MATCH (b:BusinessNode)-[:IN_CATEGORY]->(c:CategoryNode)
 RETURN b.name AS business_name, b.city AS city, c.category AS category
@@ -116,7 +118,7 @@ RETURN b.name AS business_name, b.city AS city, c.category AS category
 
 ![image3-3-1](image/3-1-1.png)
 
-2. 导入服务器和MongoDB操作不再赘述，请看本文档的3-2章节。这里新的集合名叫做BusinessAll
+2.导入服务器和MongoDB操作不再赘述，请看本文档的3-2章节。这里新的集合名叫做BusinessAll
 
 ![image3-3-2](image/3-3-2.png)
 
@@ -124,7 +126,7 @@ RETURN b.name AS business_name, b.city AS city, c.category AS category
 
 ![iamge3-3-4](image/3-3-4.png)
 
-3. 去重操作
+3.去重操作
 使用`$group`将BusinessAll集合中所有的文档按照city和category字段进行分组，然后用`$forEach`将前面结果中的数据插入到BusiDistinct集合中；BusiDistinct集合中的所有文档，即为不重复的城市和类别组合。
 
 ```js
@@ -137,22 +139,22 @@ db.BusinessAll.aggregate([
 
 ![image3-3-5](image/3-3-5.png)
 
-4. 导出BusiDistinct集合的内容为csv文件
+4.导出BusiDistinct集合的内容为csv文件
 ```shell
 mongoexport -d yelp -c BusiDistinct --type=csv --fields city,category --out result.csv
 ```
 
 ![image3-3-6](image/3-3-6.png)
 
-5. 上一步导出后，result.csv文件位于~路径下，用cp命令把他放到neo4j安装目录的的import路径下
+5.上一步导出后，result.csv文件位于~路径下，用cp命令把他放到neo4j安装目录的的import路径下
 
 ```shell
 cd ~/neo4j-community-4.0.9/import
 cp /root/result.csv ./
 ```
 
-6. 
-在neo4j网页数据库中输入以下命令，要对空值做处理
+6.在neo4j网页数据库中输入以下命令，要对空值做处理
+
 ```sql
 LOAD CSV WITH HEADERS FROM "file:///result.csv" AS f
 MERGE (c:CityNode {city: COALESCE(f.city, "")})
