@@ -144,6 +144,7 @@ RETURN COLLECT(c.category)
 #### 题目
 查询Victoria的朋友（直接相邻）分别有多少位朋友。(考察：使用with传递查询结果到后续的处理)
 #### 解析
+先找到名为"Victoria"的用户节点，从该节点出发，通过关系类型"HasFriend"找到其所有朋友节点，对于每一个朋友节点，计算其名称和其朋友的数量
 
 ```sql
 MATCH(:UserNode{name:'Victoria'})-[:HasFriend]->(friend)
@@ -160,12 +161,10 @@ RETURN friendsList,number0fFoFs
 查询城市是Chandler的商家节点。
 
 #### 解析
-- 使用MATCH子句匹配类别为Hot Pot的CategoryNode节点和它们所对应的 BusinessNode节点，并将匹配到的BusinessNode节点的city属性作为变量 cityName 传递到下一个子句。
+- 使用MATCH子句匹配类别为Hot Pot的CategoryNode节点和它们所对应的 BusinessNode节点，并将匹配到的BusinessNode节点的city属性作为变量cityName传递到下一个子句。
 - 使用WITH子句对每个城市进行分组，统计该城市中类别为Hot Pot的商家数量，并将城市名称和商家数量传递到下一个子句。
 - 使用ORDER BY子句将商家数量按照降序排序，以便选择前5个数量最多的城市。
 - 使用RETURN子句输出城市名称和对应的商家数量，并限制结果数量为前5条。
-
-注意，这个查询语句中的b.city是用于选择BusinessNode节点的city属性，而不是输出结果中的城市名称。因此，我们需要使用 WITH 子句将 city 属性转换为一个变量，并将这个变量作为输出结果中的城市名称。
 
 ```sql
 MATCH (b:BusinessNode)-[:IN_CATEGORY]->(:CategoryNode {category: 'Hot Pot'})
@@ -173,6 +172,7 @@ WITH b.city AS cityName, COUNT(*) AS numberOfBusiness
 RETURN cityName, numberOfBusiness
 ORDER BY numberOfBusiness DESC
 ```
+![image2-11](./image/2-11.png)
 
 
 ### 2-12
@@ -326,6 +326,7 @@ PROFILE查看执行计划后得到如下图
 
 #### 优化
 为UserNode的userid属性和BusinessNode的business_id属性创建索引，以加速节点的查找和匹配操作。
+
 ```sql
 CREATE INDEX FOR (user:UserNode) ON (user.userid)
 CREATE INDEX FOR (b:BusinessNode) ON (b.businessid)
@@ -334,6 +335,7 @@ CREATE INDEX FOR (b:BusinessNode) ON (b.businessid)
 ![image2-17-4](image/2-17-4.png)
 
 将子查询中的COLLECT操作改为使用节点标签进行聚合，以减少内存使用。
+
 ```sql
 MATCH (u1:UserNode {userid: '0kSXMbNFo7mdwTPj4iQv9A'})
   -[:Review]->(:ReviewNode)-[:Reviewed]->(b:BusinessNode)
